@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>楽曲操作システム☆更新入力</h2>
+<form th:action="@{/updateComplete}" method="post">
+<input type="hidden" name="song_id" th:value="${id}">
+<input type="text" name="song_name" th:value="${music.song_name}"><br>
+<input type="text" name="sinnger" th:value="${music.sinnger}"><br>
+<input type="submit" value="更新" name="update">
+</form>
+</body>
+</html>
