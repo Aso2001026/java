@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>お気に入りの楽曲</h1>
+<h2>好きな曲を入力して送信してください</h2>
+<form th:action="@{/musicout}" method="post">
+<label>曲名:</label>
+<input type="text" name="name">
+<br>
+<label>歌手名:</label>
+<input type="text" name="singer">
+<input type="submit" value="送信">
+</form>
+<p>SD3A　松石泰紀</p>
+
+</body>
+</html>
