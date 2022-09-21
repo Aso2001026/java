@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 th:text = "'hello world'">表示する部分</h1>
+<h1>こんにちは！[[${name}]]さん</h1>
+<h1 th:text ="'明日は、'+'雨'+'ですね'"></h1>
+<h1 th:text ="'明日は、'+${name}+'ですね'"></h1>
+<h1 th:text ="|こんにちは${name}ですね|"></h1>
+<div th:with = "a=1,b=2">
+<span th:text="|${a}+${b}=${a+b}|"></span>
+<span th:text = "1>10"></span>
+<span th:text = "1<10"></span>
+<span th:text = "1>=10"></span>
+<span th:text = "1<=10"></span>
+<span th:text = "1==10"></span>
+<span th:text = "1!=10"></span>
+<span th:text = "ティナ==ティナ"></span>
+<span th:text = "ティナ!=ティナ"></span>
+</div>
+<hr>
+<p th:text="${name}=='ティナ' ? 'ティナちゃんです' :'ティナちゃんではありません'"></p>
+<div th:if="${name} == 'ティナ'">
+  <p>ティナちゃんです</p>
+</div>
+<div th:unless="${name} == 'ワイン'">
+  <p>ティナちゃんではありません</p>
+</div>
+<th:blok th:if="${name} == 'ティナ'">
+  <p>divがなくてもティナちゃんです</p>
+</th:blok>
+<hr>
+<div th:switch="${name}">
+<p th:case="ティナ" th:text="|${name}です|"></p>
+<p th:case="ジナ" th:text="|${name}です|"></p>
+<p th:case="ラッシュ" th:text="|${name}です|"></p>
+<p th:case="*">名簿にありません</p>
+</div>
+</body>
+</html>
