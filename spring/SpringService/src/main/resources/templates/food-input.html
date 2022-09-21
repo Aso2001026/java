@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>サービスを利用したシステム</h2>
+<h2>登録する料理を入力してください</h2>
+<form th:action="@{/insert}" method="post"> 
+<label>料理名:</label><input type="text" name="food_name"><br>
+<label>カテゴリー:</label><input type="text" name="category">
+<input type="submit" value="登録" name="insert">
+</form>
+</body>
+</html>
