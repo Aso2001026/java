@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>下記の内容で間違いがなければ、「登録」ボタンを押してください。</h1>
+<p>名前: [[${profileForm.name}]]</p>
+<p>生年月日: [[${profileForm.year}]]年　[[${profileForm.month}]]月　[[${profileForm.day}]]日</p>
+<p>性別: [[${profileForm.sex}]]</p>
+<button type="button" onclick="location.href='./complete'">登録</button>
+<button type="button" onclick="history.back()">戻る</button>
+</body>
+</html>

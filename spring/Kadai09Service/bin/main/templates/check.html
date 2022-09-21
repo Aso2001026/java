@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>メンバー照会システム</h2>
+<h2 class="check">登録してよろしいですか？</h2>
+<form th:action="@{/insert}" method="post">
+<p>名前: [[${memberForm.name}]]</p>
+<input type="submit" value="登録" name="insert">
+<input type="submit" value="戻る" onclick="history.back()">
+</form>
+</body>
+</html>
